@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <div class="user">
+            <div class="image">
+                <img src="http://picsum.photos/50.webp" alt="avatar">
+            </div>
+            <div class="greet">Welcome back,</div>
+            <div class="name">Urooj Khan</div>
+        </div>
+        <div class="icons">
+            <i class="far fa-bell"></i>
+        </div>
+    </nav>
+
+    <main>
+        <div class="searchBar">
+            <i class="fas fa-search"></i>
+            <input type="search" placeholder="Search games">
+            <i class="fas fa-sliders"></i>
+        </div>
+
+        <div class="container heading">Categories</div>
+
+        <div class="slider categories"></div>
+
+        <div class="dflex container">
+            <div class="heading">Trending games</div>
+            <div class="seeAll">See all</div>
+        </div>
+
+        <div class="slider trending"></div>
+
+        <div class="dflex container">
+            <div class="heading">New games</div>
+            <div class="seeAll">See all</div>
+        </div>
+
+        <div class="container new"></div>
+    </main>
+
+    <footer>
+        <div class="foot-items active">
+            <i class="fas fa-compass"></i>
+        </div>
+        <div class="foot-items">
+            <i class="fas fa-fire-flame-curved"></i>
+        </div>
+        <div class="foot-items explore">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="foot-items">
+            <i class="fab fa-battle-net"></i>
+        </div>
+        <div class="foot-items">
+            <i class="far fa-clone"></i>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a24ff9630f.js" crossorigin="anonymous" defer></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        let categories = ["Adventure", "Sports", "Action", "Racing"];
+        categories.forEach(element => {
+            $('.categories').append(`<div class="chips">
+                <div class="image">
+                    <img src="http://picsum.photos/30.webp" alt="img">
+                </div>
+                <div class="label">${element}</div>
+            </div>`);
+        });
+
+        let trendingGames = ["Fornite", "Call Of Duty: Warzone", ];
+        trendingGames.forEach(element => {
+            $('.trending').append(`<div class="card" style="background-image: url('http://picsum.photos/260/320.webp');">
+            <div class="content">
+                <div class="heading">${element}</div>
+                <div class="desc">Battle Royal • Action</div>
+                <div class="btn-group">
+                    <div class="follow-btn">
+                        <i class="fas fa-fw fa-check-circle"></i> <span style="color: black;">Following</span>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>`);
+        });
+
+
+        let newGames = ["Fornite", "Call Of Duty: Warzone", ];
+        newGames.forEach(element => {
+            $('.new').append(`<div class="card">
+                <img src="http://picsum.photos/200.webp" alt="">
+                <div class="content">
+                    <div class="heading">${element}</div>
+                    <div class="desc">Battle Royal • Action</div>
+                </div>
+            </div>`);
+        });
+    </script>
+</body>
+
+</html>
